@@ -6,3 +6,4 @@ scipy
 librosa
 pylab
 wave
+tensorflow

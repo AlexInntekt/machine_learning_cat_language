@@ -8,7 +8,9 @@ from bujor_library import plotInFrequencyAndSave, readWav
 
 def start():
 
-    create_spectograms.create_spectograms()
+    if(config.GENERATE_SPECTROGRAMES):
+        create_spectograms.create_spectograms()
+        
     process.train()
 
 

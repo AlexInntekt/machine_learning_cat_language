@@ -2,11 +2,12 @@
 import os
 
 SHOW_CONFIG_VALUES = False
+GENERATE_SPECTROGRAMES = False
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AUDIO_DATA_DIR = os.path.join(BASE_DIR, "data/audio_data")
 AUDIO_DATA_CLASSES_DIR = []
 CLASSES_NAMES = ['growling','purring','chattering','hissing','trilling']
-IMAGES_PATHS = []
 
 
 
