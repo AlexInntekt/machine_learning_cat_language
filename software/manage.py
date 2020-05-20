@@ -13,8 +13,8 @@ def plot_and_save(file_path):
 
 def start():
 
-    # create_spectograms.create_spectograms()
-    plot_and_save("/home/alex/Desktop/FILS/NNGA/proj/data/audio_data/growling/41.wav")
+    create_spectograms.create_spectograms()
+    # plot_and_save("/home/alex/Desktop/FILS/NNGA/proj/data/audio_data/growling/41.wav")
 
 start()
 

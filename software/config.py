@@ -12,7 +12,8 @@ CLASSES_NAMES = ['growling','purring','chattering','hissing','trilling']
 
 for class_name in CLASSES_NAMES:
     class_path = os.path.join(AUDIO_DATA_DIR, class_name)
-    AUDIO_DATA_CLASSES_DIR.append(class_path)
+    classes_tuple = (class_name,class_path)
+    AUDIO_DATA_CLASSES_DIR.append(classes_tuple)
 
 if SHOW_CONFIG_VALUES:
     print("Base directory: {}".format(BASE_DIR))
