@@ -3,3 +3,4 @@ matplotlib
 sounddevice
 soundcard
 scipy
+librosa

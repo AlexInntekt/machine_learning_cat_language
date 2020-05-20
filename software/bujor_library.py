@@ -4,6 +4,7 @@ import sounddevice as sd
 import soundcard as sc
 from scipy.io import wavfile
 
+
 def mySine(A,f,theta0,t):
     return(A*np.sin(2*np.pi*f*t)+theta0)
 
@@ -51,6 +52,22 @@ def plotInFrequency(x,fs):
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('Magnitude')
     plt.grid(True)   
+
+def plotInFrequencyAndSave(x,fs, path_for_save):
+    N=int(np.size(x,0)/2)
+    if np.size(x,0)==1:
+        X=np.fft.fft(x,axis=1)
+    else:
+        X=np.fft.fft(x,axis=0)
+    X=np.abs(X)
+    X=X[:N]
+    f=np.arange(0,fs/2,fs/2/N)
+    plt.plot(f,X)
+    plt.xlabel('Frequency (Hz)')
+    plt.ylabel('Magnitude')
+    plt.grid(True)   
+    plt.savefig(path_for_save)
+
 
 def freqResp(f,H):
     plt.figure()
