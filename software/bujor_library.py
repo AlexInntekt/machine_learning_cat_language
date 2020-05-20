@@ -38,6 +38,14 @@ def plotInTime(x,fs):
     plt.xlabel('Time (s)')
     plt.ylabel('Amplitude')
     plt.grid(True)
+
+def plotInTimeAndSave(x,fs, path_for_save):
+    t=np.arange(0,np.size(x,0)/fs,1/fs)
+    plt.plot(t,x)
+    plt.xlabel('Time (s)')
+    plt.ylabel('Amplitude')
+    plt.grid(True)
+    plt.savefig(path_for_save)
     
 def plotInFrequency(x,fs):
     N=int(np.size(x,0)/2)

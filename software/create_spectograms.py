@@ -5,7 +5,7 @@ import pylab
 import wave
 
 import config
-from bujor_library import plotInFrequencyAndSave,readWav
+from bujor_library import plotInFrequencyAndSave,readWav, plotInTimeAndSave
 
 def random_probability(n):
     x = random.randint(0,10)
@@ -61,14 +61,14 @@ def create_spectograms():
                     validation_path = os.path.join(validation_path, filename)
                     validation_path = validation_path+".jpg"
                     validation_path = validation_path.replace(".wav","")
-                    graph_spectrogram(input_file_path, validation_path)
+                    plot_and_save(input_file_path, validation_path)
                 else:
                     training_path = os.path.join(training_path, class_name)
                     check_dir_existance(training_path)
                     training_path = os.path.join(training_path, filename)
                     training_path = training_path+".jpg"
                     training_path = training_path.replace(".wav","")
-                    graph_spectrogram(input_file_path, training_path)
+                    plot_and_save(input_file_path, training_path)
                     
                 
 
@@ -98,6 +98,9 @@ def graph_spectrogram(input_file_path, output_file_path):
 def plot_and_save(input_file_path, output_file_path):
     fs, x = readWav(input_file_path)
     
-    plotInFrequencyAndSave(x, fs, output_file_path)
+    # plotInFrequencyAndSave(x, fs, output_file_path)
+    try:
+        plotInTimeAndSave(x, fs, output_file_path)
+    except Exception as e:
+        pass
 
-    pass
