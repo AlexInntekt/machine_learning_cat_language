@@ -4,3 +4,5 @@ sounddevice
 soundcard
 scipy
 librosa
+pylab
+wave
