@@ -11,17 +11,23 @@ def create_spectograms():
         path = class_name_path_tuple[1]
 
         for filename in os.listdir(class_name_path_tuple[1]):
-            filename = os.path.join(path,filename)
-            print(filename)
-            if filename.endswith(".mp3"): 
-                file_path = os.path.join(class_name_path_tuple[1], filename)
-
+            input_file_path = os.path.join(path,filename)
+            # print(filename)
+            if input_file_path.endswith(".wav"): 
+                # file_path = os.path.join(class_name_path_tuple[1], filename)
+                # print(file_path)
                 save_path = os.path.join(config.BASE_DIR,"data")
                 save_path = os.path.join(save_path,"spectral_data")
+                # print(class_name)
                 save_path = os.path.join(save_path, class_name)
+                
+                save_path = os.path.join(save_path, filename)
+                save_path = save_path+".jpg"
             
+                print(input_file_path)
                 print(save_path)
                 # plot_and_save(input_file_path, output_file_path)
+                print("\n\n")
             else:
                 continue
 
