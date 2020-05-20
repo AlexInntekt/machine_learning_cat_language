@@ -3,6 +3,7 @@ import os
 
 SHOW_CONFIG_VALUES = False
 GENERATE_SPECTROGRAMES = False
+PROCCESS_TRAINING = True
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AUDIO_DATA_DIR = os.path.join(BASE_DIR, "data/audio_data")

@@ -10,8 +10,9 @@ def start():
 
     if(config.GENERATE_SPECTROGRAMES):
         create_spectograms.create_spectograms()
-        
-    process.train()
+
+    if(config.PROCCESS_TRAINING):
+        process.train()
 
 
 start()

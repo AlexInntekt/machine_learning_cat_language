@@ -28,8 +28,8 @@ def train():
     IMG_HEIGHT = 150
     IMG_WIDTH = 150
 
-    train_dir = "/home/alex/Desktop/FILS/NNGA/proj/data/spectral_data"
-    validation_dir = "/home/alex/Desktop/FILS/NNGA/proj/data/spectral_data"
+    train_dir = "/home/alex/Desktop/FILS/NNGA/proj/data/spectral_data/training"
+    validation_dir = "/home/alex/Desktop/FILS/NNGA/proj/data/spectral_data/validation"
 
     train_growling_dir = os.path.join(train_dir, 'growling')  
     train_hissing_dir = os.path.join(train_dir, 'hissing')  
