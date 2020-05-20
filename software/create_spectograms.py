@@ -23,8 +23,10 @@ def create_spectograms():
                 
                 save_path = os.path.join(save_path, filename)
                 save_path = save_path+".jpg"
-            
+                save_path = save_path.replace(".wav","")
+                print("Converting ")
                 print(input_file_path)
+                print("..to..")
                 print(save_path)
                 # plot_and_save(input_file_path, output_file_path)
                 print("\n\n")
