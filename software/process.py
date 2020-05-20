@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 def train():
     #https://www.tensorflow.org/tutorials/images/classification
 
-    batch_size = 128
+    batch_size = 30
     epochs = 15
     IMG_HEIGHT = 150
     IMG_WIDTH = 150
